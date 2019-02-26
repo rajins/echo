@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.3.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'idea'
+
+group = 'com.rajins'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.flywaydb:flyway-core'
+	implementation 'org.seleniumhq.selenium:selenium-java'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
