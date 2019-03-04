@@ -60,7 +60,6 @@ public class Scenario {
     }
 
     public static class Builder {
-
         public String name;
         public String description;
         public String environment;

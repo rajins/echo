@@ -6,7 +6,9 @@ import com.rajins.echo.annotations.InternetExplorer;
 import com.rajins.echo.drivers.EchoChromeDriver;
 import com.rajins.echo.drivers.EchoFirefoxDriver;
 import com.rajins.echo.model.IDriver;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 @Configuration
 public class DriverConfiguration {
