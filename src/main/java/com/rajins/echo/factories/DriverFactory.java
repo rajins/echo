@@ -23,24 +23,24 @@ public class DriverFactory {
     @Autowired
     @Chrome
     @Lazy
-    private IDriver theChromeDriver;
+    private IDriver chromeDriver;
 
     @Autowired
     @InternetExplorer
     @Lazy
-    private IDriver theIEDriver;
+    private IDriver ieDriver;
 
     @Autowired
     @Gecko
     @Lazy
-    private IDriver theFirefoxDriver;
+    private IDriver firefoxDriver;
 
     @PostConstruct
     private void construct() {
         driverSupplierMap = Collections.unmodifiableMap(new HashMap<DriverType, Supplier<IDriver>>() {{
-            put(DriverType.CHROME, () -> theChromeDriver);
-            put(DriverType.IE, () -> theIEDriver);
-            put(DriverType.GECKO, () -> theFirefoxDriver);
+            put(DriverType.CHROME, () -> chromeDriver);
+            put(DriverType.IE, () -> ieDriver);
+            put(DriverType.GECKO, () -> firefoxDriver);
         }});
     }
 
